@@ -17,6 +17,7 @@ $bg_color_main: #4EA3B7;
 
 * {
     box-sizing: border-box;
+    font-family: $police_default;
 }
 
 // NORMALISE //
@@ -107,6 +108,8 @@ $bg_color_main: #4EA3B7;
                     & h2 {
                         margin: 0 0 50px 0;
                         width: 100%;
+                        font-family: $police_default;
+                        font-size: 2rem;
                     }
 
                     & #articles_meteo {
@@ -121,12 +124,33 @@ $bg_color_main: #4EA3B7;
                     & article {
                         @include centrer();
                         background-color: white;
-                        width: 270px;
-                        height: 200px;
+                        width: 340px;
+                        height: 230px;
                         border-radius: 20px;
-    
+                        box-shadow: 0 2px 21px 0px rgb(14 66 89 / 45%);
+
+                        & h3 {
+                            text-transform: uppercase;
+                            margin: 0;
+                            font-size: 1.5rem;
+                        }
+
                         & img {
-                            width: 100%;
+                            width: 30%;
+                        }
+
+                        & p {
+                            margin: 0;
+                            font-size: 1.5rem;
+                            font-weight: bold;
+
+                            & .best_num {
+                                color: #DF0713;
+                            }
+
+                            & .low_num {
+                                color: #3CAEE7;
+                            }
                         }
                     }
                         
@@ -141,9 +165,11 @@ $bg_color_main: #4EA3B7;
                 }
 
                 & nav {
-                    width: 40%;
+                    width: 25%;
                     height: 100%;
                     background-color: white;
+                    border-radius: 20px;
+                    box-shadow: 0 2px 21px 0px rgb(14 66 89 / 45%);
 
                     & ul {
                         list-style: none;
