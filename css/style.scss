@@ -1,0 +1,88 @@
+$police_title: 'Nosifer', cursive;
+$police_default: 'Quicksand', sans-serif;
+
+$bg_color_header_footer: #096C93;
+$bg_color_nav: #0E4258;
+$bg_color_a_active: #2C697B;
+$bg_color_main: #4EA3B7;
+
+@mixin centrer ($justify: center, $direction: column) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+// NORMALISE //
+
+* {
+    box-sizing: border-box;
+}
+
+// NORMALISE //
+
+@media screen and (max-width: 1200px) {
+    body {
+        height: 100vh;
+        margin: 0;
+        @include centrer(start, column);
+
+        & header {
+            width: 100%;
+            height: 20%;
+            @include centrer();
+            background-color: $bg_color_header_footer;
+
+            & h1 {
+                color: white;
+                font-family: $police_title;
+                margin: 0;
+                width: 95%;
+                height: 60%;
+                font-size: 3rem;
+                background-image: url(../img/logo.svg);
+                background-repeat: no-repeat;
+                background-position: left;
+                background-size: 10%;
+                @include centrer();
+            }
+
+            & nav {
+                background-color: $bg_color_nav;
+                width: 100%;
+                height: 40%;
+                @include centrer();
+
+                & ul {
+                    list-style: none;
+                    padding: 0;
+                    width: 100%;
+                    height: 100%;
+                    margin: 0;
+                    @include centrer(center, row);
+
+                    & li {
+                        width: 25%;
+                        height: 100%;
+
+                        & a {
+                            width: 100%;
+                            height: 100%;
+                            text-decoration: none;
+                            @include centrer();
+
+                            & img {
+                                filter: invert(99%);
+                                width: 13%;
+                            }
+                        }
+
+                        & a:hover {
+                            background-color: $bg_color_a_active;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
