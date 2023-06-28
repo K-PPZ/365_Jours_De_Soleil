@@ -8,3 +8,4 @@
 - Taper la commande (npm i sass -D)
 
 Icons télécharger vu avec Jean Sebastien.
+Temps supplementaire vu avec Jean Sebastien.
