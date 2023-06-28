@@ -88,7 +88,6 @@ $bg_color_main: #4EA3B7;
 
         & main {
             width: 100%;
-            // height: 60%;
             background-color: $bg_color_main;
             @include centrer();
 
@@ -118,14 +117,13 @@ $bg_color_main: #4EA3B7;
                         grid-template-rows: repeat(4, 1fr);
                         grid-column-gap: 10px;
                         grid-row-gap: 10px;
-                        width: 100%;
                     }
     
                     & article {
                         @include centrer();
                         background-color: white;
-                        width: 340px;
-                        height: 230px;
+                        width: 330px;
+                        height: 190px;
                         border-radius: 20px;
                         box-shadow: 0 2px 21px 0px rgb(14 66 89 / 45%);
 
@@ -167,6 +165,7 @@ $bg_color_main: #4EA3B7;
                 & nav {
                     width: 25%;
                     height: 100%;
+                    padding: 3% 1%;
                     background-color: white;
                     border-radius: 20px;
                     box-shadow: 0 2px 21px 0px rgb(14 66 89 / 45%);
@@ -180,12 +179,30 @@ $bg_color_main: #4EA3B7;
 
                         & li {
                             width: 100%;
+                            padding: 3% 2%;
+                            margin: 5% 0;
+                            border-radius: 10px;
+                            @include centrer(center, row);
+                            cursor: pointer;
+
+                            & img {
+                                width: 10%;
+                                filter: invert(20%) sepia(55%) saturate(4432%) hue-rotate(180deg) brightness(91%) contrast(91%);
+                            }
 
                             & a {
+                                width: 100%;
+                                font-size: 1.2rem;
+                                margin-left: 5px;
                                 text-decoration: none;
                                 color: black;
                                 text-transform: uppercase;
+                                font-weight: bold;
                             }
+                        }
+
+                        & li:hover {
+                            background-color: #9CC7D1;
                         }
                     }
                 }
