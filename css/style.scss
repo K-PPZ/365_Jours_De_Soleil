@@ -212,6 +212,7 @@ $bg_color_main: #4EA3B7;
                 width: 85%;
                 @include centrer(space-between, row);
                 margin-top: 10vh;
+                margin-bottom: 5vh;
 
                 & section {
                     width: 30%;
@@ -285,6 +286,20 @@ $bg_color_main: #4EA3B7;
                         }
                     }
                 }
+            }
+        }
+
+        & footer {
+            width: 100%;
+            @include centrer();
+            background-color: $bg_color_header_footer;
+            padding: 2% 0;
+
+            & small {
+                color: white;
+                font-family: $police_title;
+                font-size: 1rem;
+                margin: 0;
             }
         }
     }
